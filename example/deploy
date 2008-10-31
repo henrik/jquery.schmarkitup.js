@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Run from parent directory with "example/deploy" to deploy to
+# http://henrik.nyh.se/examples/truncator/ (if you're authorized to).
+
+scp -r * nyh:henrik.nyh.se/examples/schmarkItUp/
+ssh nyh "cd henrik.nyh.se/examples/schmarkItUp; mv -f example.html index.html"
+echo "Deployed."

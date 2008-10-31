@@ -1,0 +1,36 @@
+ul.schmarkItUp {
+  margin: 3px 0 6px 0;
+  padding: 0;
+  height: 16px; }
+  ul.schmarkItUp li {
+    list-style: none;
+    float: left; }
+  ul.schmarkItUp .separator {
+    margin: 0 10px;
+    padding: 0;
+    width: 1px;
+    height: 16px;
+    overflow: hidden;
+    background-color: #CCC; }
+  ul.schmarkItUp a {
+    display: block;
+    width: 16px;
+    height: 16px;
+    text-indent: -10000px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 0 3px;
+    margin: 0;
+    border: 0 !important; }
+  ul.schmarkItUp .header_button a {
+    background-image: url(images/h4.png); }
+  ul.schmarkItUp .bold_button a {
+    background-image: url(images/bold.png); }
+  ul.schmarkItUp .italic_button a {
+    background-image: url(images/italic.png); }
+  ul.schmarkItUp .picture_button a {
+    background-image: url(images/picture.png); }
+  ul.schmarkItUp .link_button a {
+    background-image: url(images/link.png); }
+  ul.schmarkItUp .cut_button a {
+    background-image: url(images/cut.png); }

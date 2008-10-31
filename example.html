@@ -1,0 +1,90 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>jQuery schmarkItUp</title>
+  <script language="javascript" type="text/javascript" src="example/jquery-1.2.6.js"></script>
+  <script language="javascript" type="text/javascript" src="jquery.schmarkItUp.js"></script>
+  <script language="javascript" type="text/javascript">
+
+    $(function() {
+      
+      var markupSet = [
+        { name: 'Header', key: 'H',  click: wrapperMarkup('h4') },
+        null,
+        { name: 'Bold',   key: 'B',  click: wrapperMarkup('strong') },
+        { name: 'Italic', key: 'I',  click: wrapperMarkup('em') },
+        null,
+        { name: 'Picture', key: 'P', click: function() {
+          var url = prompt("Enter URL for image:", "http://");
+          if (url) return '<img src="'+url+'" alt="" />';
+        }},
+        {name: 'Link', key: 'L', click: function(selection) {
+          var url = prompt("Enter URL for link:", "http://");
+          if (url) return '<a href="'+url+'">'+selection+'</a>';
+        }},
+        null,
+        {name: 'Cut', key: 'C', click: function(selection) {
+          var text = prompt("Cut text:");
+          if (text != null) return (text ? '<cut text="'+text+'">'+selection+'</cut>' : '<cut>'+selection+'</cut>');
+        }}
+      ];
+
+      function wrapperMarkup(tag, prompt_text) {
+        return function(selection) {
+          if (!selection) selection = prompt(prompt_text || "Text:");
+          if (selection) return '<'+tag+'>'+selection+'</'+tag+'>'
+        }
+      }
+      
+      $('#example1 textarea').schmarkItUp(markupSet);
+      $('#example2 textarea').schmarkItUp(markupSet, function(textarea, toolbar) { toolbar.insertAfter(textarea) });
+      $('#example3 textarea').schmarkItUp(markupSet);
+    });
+
+  </script>
+  
+  <link rel="stylesheet" href="example/example.css" type="text/css" />
+  <style type="text/css">
+    body {
+      padding: 20px 10px;
+    }
+    textarea {
+      background: #FDFDF9;
+      display: block;
+      width: 50%;
+      height: 6em;
+    }
+    textarea.first {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+  <h1>jQuery schmarkItUp</h1>
+  <p>
+    By <a href="http://henrik.nyh.se">Henrik Nyh</a>.
+    See <a href="http://github.com/henrik/jquery.schmarkitup.js/">the project on GitHub</a>.
+  </p>
+  
+  <h2>Example 1: Toolbar above (default)</h2>
+
+  <form id="example1">
+    <textarea>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+  </form>
+  
+  <h2>Example 2: Toolbar below (custom placement)</h2>
+  
+  <form id="example2">
+    <textarea>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+  </form>
+  
+  <h2>Example 3: One call, multiple textareas</h2>
+  
+  <form id="example3">
+    <textarea class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+    <textarea>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+  </form>
+
+</body>
+</html>
