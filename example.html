@@ -9,8 +9,6 @@
     $(function() {
       
       var markupSet = [
-        { name: 'Header', key: 'H',  click: wrapperMarkup('h4') },
-        null,
         { name: 'Bold',   key: 'B',  click: wrapperMarkup('strong') },
         { name: 'Italic', key: 'I',  click: wrapperMarkup('em') },
         null,
@@ -22,6 +20,8 @@
           var url = prompt("Enter URL for link:", "http://");
           if (url) return '<a href="'+url+'">'+selection+'</a>';
         }},
+        null,
+        { name: 'Header', key: 'H',  click: wrapperMarkup('h4') },
         null,
         {name: 'Cut', key: 'C', click: function(selection) {
           var text = prompt("Cut text:");

@@ -74,10 +74,10 @@ You can, of course, reuse logic in the `click` methods. In this example, an anon
     (function() {
       
       markupSet = [
-        { name: 'Header', key: 'H',  click: wrapperMarkup('h4', 'Header:') },
-        null,
         { name: 'Bold',   key: 'B',  click: wrapperMarkup('strong') },
-        { name: 'Italic', key: 'I',  click: wrapperMarkup('em') }
+        { name: 'Italic', key: 'I',  click: wrapperMarkup('em') },
+        null,
+        { name: 'Header', key: 'H',  click: wrapperMarkup('h4', 'Header:') }
       ];
     
       function wrapperMarkup(tag, prompt_text) {
