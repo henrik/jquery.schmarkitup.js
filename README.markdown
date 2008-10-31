@@ -1,6 +1,6 @@
 # jQuery schmarkItUp
 
-[jQuery](http://jquery.com/) (JavaScript) plugin for textarea markup editing (not WYSIWYG).
+[jQuery](http://jquery.com/) (JavaScript) plugin for non-WYSIWYG textarea markup editing.
 
 schmarkItUp is loosely based on [markItUp](http://markitup.jaysalvat.com/), but does less and is easier to hack. It provides a simple `<ul>` toolbar and nothing else, unlike markItUp:
 
