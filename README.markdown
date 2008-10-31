@@ -4,7 +4,7 @@
 
 schmarkItUp is loosely based on [markItUp](http://markitup.jaysalvat.com/), but does less and is easier to hack. It provides a simple `<ul>` toolbar and nothing else, unlike markItUp:
 
-![Lots of added markup](http://markitup.jaysalvat.com/_images/cssmap-after.png)!
+![Lots of added markup](http://markitup.jaysalvat.com/_images/cssmap-after.png)
 
 The toolbar can easily be put anywhere you want. The toolbar button callbacks are simple but powerful function calls, with no magic placeholders.
 
@@ -23,7 +23,7 @@ Insert before the textarea:
 Control where the toolbar goes:
 
     $("#my_textarea").schmarkItUp(markupSet, function(textarea, toolbar) {
-      toolbar.insertAfter(textarea)
+      toolbar.insertAfter(textarea);
     });
     
 
