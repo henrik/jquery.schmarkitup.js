@@ -48,7 +48,7 @@ Example `markupSet`:
     var markupSet = [
       { name: 'Very Bold', klass: 'bold', key: 'B',  click: function(selection) {
         if (!selection) selection = prompt("Text:");
-        if (selection) return '<'+tag+'>'+selection+'</'+tag+'>'
+        if (selection) return '<strong>'+selection+'</strong>';
       }},
       null,
       { name: 'Picture', key: 'P', click: function() {
@@ -83,7 +83,7 @@ You can, of course, reuse logic in the `click` methods. In this example, an anon
       function wrapperMarkup(tag, prompt_text) {
         return function(selection) {
           if (!selection) selection = prompt(prompt_text || "Text:");
-          if (selection) return '<'+tag+'>'+selection+'</'+tag+'>'
+          if (selection) return '<'+tag+'>'+selection+'</'+tag+'>';
         }
       }
       
