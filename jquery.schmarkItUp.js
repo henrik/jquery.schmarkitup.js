@@ -38,18 +38,18 @@
 	  
 
   // Mostly from textile_toolbar
-  function replaceSelection(text_area, value) {
+  function replaceSelection(textarea, value) {
     if (document.selection) { //IE support
-      text_area.focus();
+      textarea.focus();
       document.selection.createRange().text = value;
-    } else if (text_area.selectionStart || text_area.selectionStart == '0') { //Mozilla/Firefox/Netscape 7+ support    
-      var startPos = text_area.selectionStart;
-      var endPos = text_area.selectionEnd;
-      text_area.value = text_area.value.substring(0, startPos) + value +
-                       text_area.value.substring(endPos, text_area.value.length);
+    } else if (textarea.selectionStart || textarea.selectionStart == '0') { //Mozilla/Firefox/Netscape 7+ support    
+      var startPos = textarea.selectionStart;
+      var endPos = textarea.selectionEnd;
+      textarea.value = textarea.value.substring(0, startPos) + value +
+                       textarea.value.substring(endPos, textarea.value.length);
 
-      text_area.selectionStart = startPos;
-      text_area.selectionEnd = startPos + value.length;
+      textarea.selectionStart = startPos;
+      textarea.selectionEnd = startPos + value.length;
     }  
   }
   
