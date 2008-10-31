@@ -38,7 +38,7 @@ given a class that is the lowercase name followed by "_button". Override with `k
 
 If you pass a `key`, that's set as the accesskey, so e.g. `Ctrl+B` triggers bold.
 
-Assign a function to `key`. When the button is clicked, the function will be called and will be
+Assign a function to `click`. When the button is clicked, the function will be called and will be
 passed the currently selected text (if any). You don't have to use that text. The text returned
 by this function will be inserted at the caret, or replace the selected text. The output will
 be selected so you can easily nest tags.
