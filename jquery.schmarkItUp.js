@@ -39,6 +39,7 @@
 
   // Mostly from textile_toolbar
   function replaceSelection(textarea, value) {
+    var scrollPosition = textarea.scrollTop;
     if (document.selection) { //IE support
       textarea.focus();
       document.selection.createRange().text = value;
@@ -50,7 +51,8 @@
 
       textarea.selectionStart = startPos;
       textarea.selectionEnd = startPos + value.length;
-    }  
+    }
+    textarea.scrollTop = scrollPosition;
   }
   
   
@@ -58,7 +60,6 @@
 	function getSelection(textarea) {
 		textarea.focus();
 
-		scrollPosition = textarea.scrollTop;
 		if (document.selection) {
 			selection = document.selection.createRange().text;
 			if ($.browser.msie) { // ie
