@@ -22,7 +22,7 @@
       		title = name + (button.key ? ' [Ctrl+'+button.key+']' : '');
       		key = button.key ? ' accesskey="'+button.key+'"' : '';
 
-          $li = $('<li class="'+klass+'"><a href=""'+key+' title="'+title+'">'+name+'</a></li>').click(function() {
+          $li = $('<li class="'+klass+'"><a href="#"'+key+' title="'+title+'">'+name+'</a></li>').click(function() {
             var text = button.click(getSelection(field));
             if (text != null) replaceSelection(field, text);
           	return false;
