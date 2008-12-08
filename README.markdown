@@ -92,7 +92,7 @@ You can, of course, reuse logic in the `click` methods. In this example, an anon
 
 ## Credits and license
 
-Uses some code from [markItUp](http://markitup.jaysalvat.com/) by Jay Salvat and from [textile_toolbar](http://github.com/pelargir/textile_toolbar/) by Matthew Bass.
+Uses some code from [markItUp](http://markitup.jaysalvat.com/) by Jay Salvat and from [textile\_toolbar](http://github.com/pelargir/textile_toolbar/) by Matthew Bass.
 
 The example images are [Silk](http://www.famfamfam.com/lab/icons/silk/) by Mark James.
 
